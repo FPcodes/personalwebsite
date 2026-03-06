@@ -1,0 +1,267 @@
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --subtle: #666666;
+  --accent: #0f7a3a;        /* Refined matrix green */
+  --accent-soft: #e6f4ec;   /* Soft green tint */
+  --card: #f7f9fc;
+  --max-width: 1100px;
+}
+
+body.dark {
+  --bg: #0d1117;
+  --text: #f0f6fc;
+  --subtle: #8b949e;
+  --accent: #2ecc71;        /* Slightly brighter green for dark */
+  --accent-soft: #16261c;
+  --card: #161b22;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background:
+    linear-gradient(to right, rgba(15,122,58,0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15,122,58,0.04) 1px, transparent 1px),
+    var(--bg);
+  background-size: 40px 40px;
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* NAV */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.navbar nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text);
+  transition: opacity 0.2s ease;
+}
+
+.navbar nav a:hover {
+  color: var(--accent);
+}
+
+#theme-toggle {
+  margin-left: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 120px auto;
+  padding: 0 40px;
+  gap: 60px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 550px;
+}
+
+.hero .subtle {
+  margin-top: 12px;
+  color: var(--subtle);
+  font-size: 16px;
+}
+
+.hero img {
+  width: 240px;
+  border-radius: 12px;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+/* SECTIONS */
+
+.section {
+  max-width: var(--max-width);
+  margin: 120px auto;
+  padding: 0 40px;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--accent);
+  margin-top: 10px;
+}
+
+/* PROJECTS */
+
+.project {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 14px;
+  margin-bottom: 60px;
+  transition: transform 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+}
+
+.project h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.project ul {
+  padding-left: 20px;
+}
+
+.project h3 {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(15,122,58,0.08);
+}
+
+.project h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.project:hover h3::after {
+  width: 100%;
+}
+
+iframe {
+  margin-top: 20px;
+  width: 100%;
+  height: 380px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* VPS STACK VISUAL */
+
+.deployment-card {
+  margin-top: 25px;
+  padding: 25px;
+  background: var(--bg);
+  border-radius: 12px;
+  border: 1px solid var(--accent-soft);
+}
+
+.deployment-layer {
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--accent);
+  background: var(--card);
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+/* EXPANDABLE */
+
+.expand-btn {
+  margin-top: 20px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.expand-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.expand-content {
+  display: none;
+  margin-top: 15px;
+  font-size: 15px;
+  color: var(--subtle);
+}
+
+/* FADE-IN ANIMATION */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  margin-top: 20px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}

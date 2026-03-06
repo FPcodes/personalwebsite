@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franklin Paulus | Systems Builder</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-left">Franklin Paulus</div>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle">🌙</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Building <span class="accent">production-ready systems.</span></h1>
+        <p>
+          Backend-focused systems + software engineer designing secure, database-driven
+          applications with real-world deployment experience.
+        </p>
+        <p class="subtle">
+          Currently building Given — an independent platform project exploring
+          multi-tenant data systems.
+        </p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/headshot.jpg" alt="Frank Paul" />
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <h2>Featured Work</h2>
+
+      <div class="project">
+        <h3>Web-based Business Data Dashboard for Luna NYC Electric Corp.</h3>
+        <p>
+          In-house custom built dashboard for operational data management and
+          reporting
+        </p>
+        <ul>
+          <li>
+            Deployed on a self-managed company Linux Server using proper
+            security configurations
+          </li>
+          <li>
+            Querying data from company PostgreSQL database, secured with proper
+            access controls
+          </li>
+          <li>Layout built with responsive design principles</li>
+          <li>Role-based access design</li>
+        </ul>
+        <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/ejw0c0f_Oi8"
+          title="Luna NYC Electric Corp. Dashboard"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>S&P 500 Sector Analyzer</h3>
+        <p>
+          Deployed stock market website which analyzes each sector in the S&P
+          500 index.
+        </p>
+        <ul>
+          <li>Relational data modeling with PostgreSQL</li>
+          <li>
+            Developed APIs to fetch data from yfinanceapi to retrieve insights
+          </li>
+          <li>Vanilla CSS and React for frontend development</li>
+          <li>Tested with Python unittest framework and Jest</li>
+        </ul>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/x5-cpkt0SsU"
+            title="S&P 500 Sector Analyzer"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <div class="project">
+        <h3>Multi-Tenant Data Platform</h3>
+        <p>
+          Infrastructure and deployment architecture for a web-based
+          multi-tenant business data platform.
+        </p>
+
+        <ul>
+          <li>
+            Designed a multi-tenant application architecture supporting isolated
+            data environments
+          </li>
+          <li>Deployed containerized application services on a Linux VPS</li>
+          <li>
+            Configured public web access while restricting database connections
+            to approved devices
+          </li>
+          <li>
+            Implemented PostgreSQL within a Docker environment with controlled
+            network exposure
+          </li>
+          <li>
+            Structured deployment to support future tenant onboarding and system
+            scaling
+          </li>
+        </ul>
+
+        <div class="deployment-card">
+          <div class="deployment-layer">
+            Web Application (Multi-Tenant Dashboard)
+          </div>
+          <div class="deployment-layer">Containerized Services</div>
+          <div class="deployment-layer">Reverse Proxy + HTTPS Routing</div>
+          <div class="deployment-layer">PostgreSQL Database (Dockerized)</div>
+          <div class="deployment-layer">
+            Restricted Database Access Controls
+          </div>
+        </div>
+
+        <button class="expand-btn">View Deployment Details</button>
+        <div class="expand-content">
+          <p>
+            Designed and deployed a containerized environment supporting a
+            multi-tenant web application accessible via HTTPS. Database services
+            run inside a Docker container with restricted access controls,
+            allowing application traffic while limiting direct database
+            connectivity to approved internal devices.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Professional Experience</h2>
+      <h3>Systems + Software Engineer: Luna NYC Electric Corp.</h3>
+      <ul>
+        <li>
+          Secured a Linux VPS with PostgreSQL using UFW firewalls and Tailscale for device-only access
+        </li>
+        <li>
+          Designed relational database schemas to improve data integrity and
+          query performance
+        </li>
+        <li>
+          Built a Dockerized dashboard using JS, Python, and SQL for tracking
+          company operations
+        </li>
+        <li>
+          Automated fixture pricing and SQL inserts with a Python data pipeline
+        </li>
+        <li>
+          Processed field data with Power Query to generate daily invoicing and
+          cashflow metrics
+        </li>
+        <li>
+          Analyzed payroll data with Python and SQL to ensure accuracy and tax
+          compliance
+        </li>
+      </ul>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        Self-taught since 2022 while working full-time. Focused on backend
+        systems, database architecture, and infrastructure-aware software
+        design.
+      </p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+
+      <p>
+        Email:
+        <a href="mailto:franklinfpaulus@email.com">
+          franklinfpaulus@email.com
+        </a>
+      </p>
+
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/frank-paul-12345" target="_blank">
+          www.linkedin.com/in/frank-paul-12345
+        </a>
+      </p>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
