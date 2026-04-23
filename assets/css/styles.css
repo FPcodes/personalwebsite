@@ -102,11 +102,9 @@ body {
 
 .hero p {
   font-size: 18px;
-  max-width: 550px;
 }
 
 .hero .subtle {
-  margin-top: 12px;
   color: var(--subtle);
   font-size: 16px;
 }
@@ -257,6 +255,14 @@ iframe {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+body.dark #contact a {
+  color: #7cc7ff;
+}
+
+body.dark #contact a:hover {
+  color: #a5dbff;
 }
 
 /* RESPONSIVE */
